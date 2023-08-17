@@ -1,0 +1,48 @@
+  .water {
+    margin: auto;
+    position: relative;
+    width: 160px;
+    opacity: 0.4;
+  }
+
+.w1 {
+    background-color: var(--liquid-1);
+    box-shadow: inset 0 0 50px var(--liquid-1-shadown);
+}
+
+.w2 {
+    background-color: var(--liquid-2);
+    box-shadow: inset 0 0 50px var(--liquid-2-shadown);
+}
+
+.w3 {
+    background-color: var(--liquid-3);
+    box-shadow: inset 0 0 50px var(--liquid-3-shadown);
+}
+
+.w4 {
+    background-color: var(--liquid-4);
+    box-shadow: inset 0 0 50px var(--liquid-4-shadown);
+}
+  
+  .water::after {
+    content: "";
+    width: 204%;
+    height: 204%;
+    background-color: var(--color-2);
+    position: absolute;
+    top: -180%;
+    left: -52%;
+    border-radius: 40%;
+    animation: anim 12s linear infinite;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes anim {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }

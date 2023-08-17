@@ -1,167 +1,95 @@
 <!DOCTYPE html>
 
 <head>
+  <link rel="stylesheet" type="text/css" href="./src/css/style.css"/>
+  <link rel="stylesheet" type="text/css" href="./src/css/liquid.css"/>
   <style>
-    body {
-      background-color: transparent;
-      display: flex;
-      align-items: center;
-      align-content: center;
-      background-image: url("src/images/backgroun.jpg");
-      background-size: cover;
-      background-repeat: no-repeat;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    .tank {
+      height: 200px;
+      width: 160px;
+      background-color: var(--color-2);
+      margin: 5px;
+      margin-top: 30px;
     }
-    .container {
-      background-color: #2A2A2A;
-      display: flex;
-      position: absolute;
-      flex-direction: column;
-      height: 570px;
-      width: 720px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      border-radius: 15px;
-      opacity: 0.98;
-      padding: 20px;
+    .tank-blank {
+      height: 10%;
     }
-    .row {
+    .tank-line1 {
+      height: 80%;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+   
+    .tank-value {
+      background-color: var(--color-3);
+      height: 20px;
       display: flex;
       flex-direction: row;
+      overflow-y: hidden;
+      overflow-x: hidden;
     }
-    .column {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .w50 {
-      width: 50%;
-    }
-    .w100 {
-      width: 100%;
-    }
-    .w70 {
-      width: 70%;
-    }
-    .w30 {
-      width: 30%;
-    }
-    .w80 {
-      width: 80%;
-    }
-    .w20 {
-      width: 30%;
-    }
-    .h100 {
+    
+    .tank-value-1 {
       height: 100%;
-    }
-    .h80 {
-      height: 80%;
-    }
-    .h70 {
-      height: 70%;
-    }
-    .h60 {
-      height: 60%;
-    }
-    .h50 {
-      height: 50%;
-    }
-    .tab {
-      height: 120px;
-    }
-    .tab2 {
-      height: 300px;
-    }
-    .tab3 {
-      height: 180px;
-    }
-    .title {
-      padding-left: 30px;
-    }
-    .title h3 {
-      font-size: 40px;
-    }
-    .title p {
-      font-size: 15px;
-    }
-    .title p, h3, h2, h1 {
-      color: #FFF;
-      font-weight: normal;
-      padding: 0;
-      margin: 0;
-    }
-    h3 span {
-      font-weight: bold;
-    }
-    .cardcontainer {
-      padding-right: 30px;
-      display: flex;
-      vertical-align: middle;
-      align-items: center;
-      align-content: center;
-    }
-    .card {
-      background-color: #3A3A3A;
-    }
-    .card .border {
-      background-color: #4A4A4A;
-      width: 20px;
+      background-color: var(--color-4);
+      width: 50%;
       position: relative;
-      left: calc(100% - 20px);
-      top: -100%;
-      display: flex;
+      left: -10px;
       text-align: center;
     }
-    .border p {
-      writing-mode: vertical-lr;
-      color: #FFF;
-      font-size: 13px;
-      padding: 0;
+
+    .tank-value-1 p {
       margin: 0;
-      padding-left: 2px;
-    }
-    .car {
-      padding-right: 15px;
-      padding-top: 8px;
-    }
-    .pd-t8 {
-      padding-top: 8px;
-    }
-    .pd-t10 {
-      padding-top: 10px;
-    }
-    .np {
       padding: 0;
-    }
-    .nm {
-      margin: 0;
-    }
-    .p-fs10 {
-      font-size: 10px;
-    }
-    .p-fs12 {
-      font-size: 12px;
-    }
-    .p-fs14 {
-      font-size: 14px;
-    }
-    .p-fs16 {
-      font-size: 16px;
-    }
-    .p-fs18 {
-      font-size: 18px;
-    }
-    .p-fwb {
+      margin-left: 10px;
+      font-size: 11px;
       font-weight: bold;
     }
-    .p-cw {
+
+    .tank-value-2 {
+      width: 50%;
+      text-align: center;
+    }
+
+    .tank-value-2 p {
+      margin: 0;
+      padding: 0;
       color: white;
+      font-size: 12px;
+      font-weight: bold;
+      position: relative;
+      left: -5px;
     }
-    .p-co {
-      color: orange;
+
+    .skew {
+      -webkit-transform: skew(0deg); /* Chrome, Opera */
+          -ms-transform: skew(0deg); /* IE */
+              transform: skew(0deg); /* Padrão */
     }
+
+    .positive {
+      -webkit-transform: skew(30deg); /* Chrome, Opera */
+          -ms-transform: skew(30deg); /* IE */
+              transform: skew(30deg); /* Padrão */
+    }
+
+    .negative {
+      -webkit-transform: skew(-30deg); /* Chrome, Opera */
+          -ms-transform: skew(-30deg); /* IE */
+              transform: skew(-30deg); /* Padrão */
+    }
+
+    .bt-select {
+      position: absolute;
+      height: 20px;
+      width: 160px;
+      background-color: #3A3A3A;
+      border: #4A4A4A;
+      color: #8A8A8A;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
   </style>
 </head>
 
@@ -211,8 +139,92 @@
     </div>
 
   </div>
-  <div class="row w100 tab2">
+  <div style="padding-left: 20px;" class="row w100 tab2">
+    <div class="column tank">
+      <div class="tank-value">
+        <div class="tank-value-1 negative">
+          <p class="positive">$45 / Liter</p>
+        </div>
+        <div class="tank-value-2">
+          <p>DIESEL</p>
+        </div>
+      </div>
+      <div class="tank-blank"></div>
+      <div class="tank-line1 water w1"></div>
+    </div>
+    <div class="column tank">
+      <div class="tank-value">
+        <div class="tank-value-1 negative">
+          <p class="positive">$45 / Liter</p>
+        </div>
+        <div class="tank-value-2">
+          <p>SUPER</p>
+        </div>
+      </div>
+      <div class="tank-blank"></div>
+      <div class="tank-line1 water w2"></div>
+    </div>
 
+    <div class="column tank">
+      <div class="tank-value">
+        <div class="tank-value-1 negative">
+          <p class="positive">$45 / Liter</p>
+        </div>
+        <div class="tank-value-2">
+          <p>SUPER-PLUS</p>
+        </div>
+      </div>
+      <div class="tank-blank"></div>
+      <div class="tank-line1 water w3"></div>
+    </div>
+    <div class="column tank">
+      <div class="tank-value">
+        <div class="tank-value-1 negative">
+          <p class="positive">$45 / Liter</p>
+        </div>
+        <div class="tank-value-2">
+          <p>ELECTO</p>
+        </div>
+      </div>
+      <div class="tank-blank"></div>
+      <div class="tank-line1 water w4"></div>
+    </div>
+
+    <button
+    style="
+      bottom: 215px;
+      left: 45px;
+    "
+    class="bt-select">
+      SELECT
+    </button>
+
+    <button
+    style="
+      bottom: 215px;
+      left: 215px;
+    "
+    class="bt-select">
+      SELECT
+    </button>
+
+    <button
+    style="
+      bottom: 215px;
+      left: 385px;
+    "
+    class="bt-select">
+      SELECT
+    </button>
+
+    <button
+    style="
+      bottom: 215px;
+      left: 555px;
+    "
+    class="bt-select">
+      SELECT
+    </button>
   </div>
   <div class="row w100 tab3">
 
