@@ -4,80 +4,6 @@
   <link rel="stylesheet" type="text/css" href="./src/css/style.css"/>
   <link rel="stylesheet" type="text/css" href="./src/css/liquid.css"/>
   <style>
-    .tank {
-      height: 200px;
-      width: 160px;
-      background-color: var(--color-2);
-      margin: 5px;
-      margin-top: 30px;
-    }
-    .tank-blank {
-      height: 10%;
-    }
-    .tank-line1 {
-      height: 80%;
-      overflow-y: hidden;
-      overflow-x: hidden;
-    }
-   
-    .tank-value {
-      background-color: var(--color-3);
-      height: 20px;
-      display: flex;
-      flex-direction: row;
-      overflow-y: hidden;
-      overflow-x: hidden;
-    }
-    
-    .tank-value-1 {
-      height: 100%;
-      background-color: var(--color-4);
-      width: 50%;
-      position: relative;
-      left: -10px;
-      text-align: center;
-    }
-
-    .tank-value-1 p {
-      margin: 0;
-      padding: 0;
-      margin-left: 10px;
-      font-size: 11px;
-      font-weight: bold;
-    }
-
-    .tank-value-2 {
-      width: 50%;
-      text-align: center;
-    }
-
-    .tank-value-2 p {
-      margin: 0;
-      padding: 0;
-      color: white;
-      font-size: 12px;
-      font-weight: bold;
-      position: relative;
-      left: -5px;
-    }
-
-    .skew {
-      -webkit-transform: skew(0deg); /* Chrome, Opera */
-          -ms-transform: skew(0deg); /* IE */
-              transform: skew(0deg); /* Padrão */
-    }
-
-    .positive {
-      -webkit-transform: skew(30deg); /* Chrome, Opera */
-          -ms-transform: skew(30deg); /* IE */
-              transform: skew(30deg); /* Padrão */
-    }
-
-    .negative {
-      -webkit-transform: skew(-30deg); /* Chrome, Opera */
-          -ms-transform: skew(-30deg); /* IE */
-              transform: skew(-30deg); /* Padrão */
-    }
 
     .bt-select {
       position: absolute;
@@ -90,6 +16,181 @@
       font-weight: bold;
     }
 
+    .bt-selected {
+      background-color: #39FF14;
+      border: #006400;
+      color: white;
+    }
+
+    .barra {
+      position: absolute;
+      background-color: var(--color-6);
+      height: 13px;
+      width: 3px;
+    }
+
+    .line {
+      position: absolute;
+      background-color: var(--color-3);
+      width: 2px;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background-color: var(--color-6);
+      height: 3px;
+      width: 3px;
+    }
+
+    .fuel-level {
+      position: absolute;
+      background-color: var(--color-2);
+      width: 210px;
+      height: 15px;
+      top: 134px;
+      left: 500px;
+      display: flex;
+      flex-direction: row;
+      text-align: center;
+    }
+
+    .fuel-text {
+      text-align: center;
+      height: 100%;
+      font-size: 10px;
+    }
+
+    .fuel-icon {
+      background-color: var(--color-3);
+      height: 100%;
+      width: 15px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      vertical-align: middle;
+    }
+
+    .fuel-level-bar {
+      height: 80%;
+      width: 5px;
+      margin: 1px;
+      background-color: var(--color-2);
+      border: 1px solid var(--color-3);
+    }
+
+    .fuel-level-bar-complet {
+      background-color: var(--color-4);
+    }
+
+    .fuel-level-content {
+      height: 100%;
+      width: 80px;
+      display: flex;
+      flex-direction: row;
+      margin-left: 5px;
+    }
+
+    .tank-title-absolut {
+      position: absolute;
+      height: 25px;
+      width: 170px;
+      top: 131px;
+      left: 60px;
+      text-align: center;
+    }
+
+    .tank-title-absolut p {
+      margin: 0;
+      padding: 0;
+      font-size: 20px;
+      color: var(--color-3);
+    }
+
+     .tank-title-absolut p span {
+      font-weight: bold;
+      color: var(--color-6);
+     }
+
+     .footer {
+      align-items: center;
+     }
+
+     .footer-1 {
+      background-color: var(--color-2);
+      width: 670px;
+      height: 20px;
+      margin-top: 25px;
+      text-align: start;
+     }
+
+     .footer-1 p {
+      color: var(--color-6);
+      margin-left: 20px;
+      font-size: 14px;
+     }
+
+     .footer-2 {
+      background-color: var(--color-2);
+      width: 670px;
+      height: 35px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: row;
+      vertical-align: middle;
+      align-items: center;
+     }
+
+      .footer-2 p {
+      color: var(--color-6);
+      margin-left: 20px;
+      font-size: 14px;
+     }
+
+     .footer-2-ico {
+      background-color: var(--color-4);
+      width: 25px;
+      height: 25px;
+      margin-left: 20px;
+     }
+
+      .footer-2-ico img {
+      padding: 5px;
+     }
+
+     .footer-3 {
+      background-color: var(--color-2);
+      width: 670px;
+      height: 50px;
+      margin-top: 10px;
+      vertical-align: middle;
+     }
+
+      .footer-3 p {
+      color: var(--color-3);
+      margin-left: 20px;
+      font-size: 15px;
+     }
+
+     .footer-3 p span {
+      color: var(--color-6);
+      font-size: 15px;
+      font-weight: bold;
+     }
+
+     .price {
+      font-family: Calculator;
+      color: white !important;
+      font-size: 30px !important;
+     }
+
+    .mt-10 {
+      margin-top: 10px;
+    }
+
+    .mt-5 {
+      margin-top: 5px;
+    }
   </style>
 </head>
 
@@ -150,7 +251,7 @@
         </div>
       </div>
       <div class="tank-blank"></div>
-      <div class="tank-line1 water w1"></div>
+      <div style="--i: 12s; --j:0.1s;" class="tank-line1 water w1"></div>
     </div>
     <div class="column tank">
       <div class="tank-value">
@@ -162,7 +263,7 @@
         </div>
       </div>
       <div class="tank-blank"></div>
-      <div class="tank-line1 water w2"></div>
+      <div style="--i: 10s; --j:0.8s;" class="tank-line1 water w2"></div>
     </div>
 
     <div class="column tank">
@@ -175,7 +276,7 @@
         </div>
       </div>
       <div class="tank-blank"></div>
-      <div class="tank-line1 water w3"></div>
+      <div style="--i: 14s; --j:0.2s;" class="tank-line1 water w3"></div>
     </div>
     <div class="column tank">
       <div class="tank-value">
@@ -187,7 +288,7 @@
         </div>
       </div>
       <div class="tank-blank"></div>
-      <div class="tank-line1 water w4"></div>
+      <div style="--i: 13s; --j:0.5s;" class="tank-line1 water w4"></div>
     </div>
 
     <button
@@ -195,8 +296,8 @@
       bottom: 215px;
       left: 45px;
     "
-    class="bt-select">
-      SELECT
+    class="bt-select bt-selected">
+      SELECTED
     </button>
 
     <button
@@ -227,6 +328,80 @@
     </button>
   </div>
   <div class="row w100 tab3">
-
+    <div class="column w100 h100 footer">
+      <div class="footer-1">
+        <p class="nm np">How much gasoline you need?</p>
+      </div>
+      <div class="footer-2">
+        <div class="footer-2-ico">
+          <img src="./src/images/Icon/fuel2.svg" />
+        </div>
+      </div>
+      <div class="footer-3">
+        <div class="column w50 h100 mt-5">
+          <p class="nm np">TOTAL <span>PRICE</span></p>
+          <p class="nm np"><span>FOR GASOLINE</span></p>
+        </div>
+        <div class="h100 w50">
+          <p class="nm np price">R$ 6.000,00</p>
+        </div>
+      </div>
+    </div>
   </div>
+  <div style="top: 65px; left: 310px;" class="barra positive"></div>
+  <div style="top: 65px; left: 318px;" class="barra positive"></div>
+  <div style="top: 65px; left: 326px;" class="barra positive"></div>
+  <div style="top: 25px; left: 40px;" class="barra negative"></div>
+  <div style="top: 25px; left: 32px;" class="barra negative"></div>
+  <div style="top: 25px; left: 24px;" class="barra negative"></div>
+  <div style="height: 120px; left: 370px; top: 20px;" class="line"></div>
+  <div style="height: 15px; left: 376px; top: 13px; transform: rotate(90deg);" class="line"></div>
+  <div style="height: 35px; left: 386px; top: 123px; transform: rotate(90deg);" class="line"></div>
+  <div style="left: 400px; top: 139px;" class="circle"></div>
+  <div style="left: 385px; top: 19px;" class="circle"></div>
+
+<div style="height: 120px; left: 720px; top: 20px;" class="line"></div>
+<div style="height: 35px; left: 703px; top: 4px; transform: rotate(90deg);" class="line"></div>
+<div style="height: 6px; left: 717px; top: 137px; transform: rotate(90deg);" class="line"></div>
+<div style="left: 713px; top: 139px;" class="circle"></div>
+<div style="left: 685px; top: 20px;" class="circle"></div>
+
+<div style="height: 270px; left: 720px; top: 145px;" class="line"></div>
+<div style="height: 35px; left: 703px; top: 398px; transform: rotate(90deg);" class="line"></div>
+<div style="height: 6px; left: 717px; top: 142px; transform: rotate(90deg);" class="line"></div>
+<div style="left: 713px; top: 144px;" class="circle"></div>
+<div style="left: 685px; top: 414px;" class="circle"></div>
+
+<div style="height: 270px; left: 36px; top: 145px;" class="line"></div>
+<div style="height: 35px; left: 52px; top: 398px; transform: rotate(90deg);" class="line"></div>
+<div style="height: 16px; left: 45px; top: 138px; transform: rotate(90deg);" class="line"></div>
+<div style="left: 50px; top: 145px;" class="circle"></div>
+<div style="left: 68px; top: 414px;" class="circle"></div>
+
+<div class="tank-title-absolut">
+  <p>SELECT <span>FUEL TYPE</span></p>
+</div>
+
+
+  <div class="fuel-level">
+    <div class="fuel-icon">
+      <img style="padding: 2px;" src="./src/images/Icon/fuel.svg" />
+    </div>
+    <div>
+      <p class="p-cw nm np fuel-text">Gasoline Level on Car</p>
+    </div>
+    <div class="fuel-level-content">
+      <div class="fuel-level-bar fuel-level-bar-complet"></div>
+      <div class="fuel-level-bar fuel-level-bar-complet"></div>
+      <div class="fuel-level-bar fuel-level-bar-complet"></div>
+      <div class="fuel-level-bar fuel-level-bar-complet"></div>
+      <div class="fuel-level-bar fuel-level-bar-complet"></div>
+      <div class="fuel-level-bar fuel-level-bar-complet"></div>
+      <div class="fuel-level-bar"></div>
+      <div class="fuel-level-bar"></div>
+      <div class="fuel-level-bar"></div>
+      <div class="fuel-level-bar"></div>
+    </div>
+  </div>
+</div>
 </body>

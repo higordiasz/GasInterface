@@ -15,6 +15,11 @@
     --liquid-5-shadown: #007DA6;
   }
 
+  @font-face {
+    font-family: Calculator;
+    src: url(../fonts/Calculator.ttf);
+}
+
 body {
     background-color: transparent;
     display: flex;
@@ -175,3 +180,78 @@ body {
   .p-co {
     color: var(--color-5);
   }
+
+  .tank {
+      height: 200px;
+      width: 160px;
+      background-color: var(--color-2);
+      margin: 5px;
+      margin-top: 30px;
+    }
+    .tank-blank {
+      height: 10%;
+    }
+    .tank-line1 {
+      height: 80%;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .tank-value {
+      background-color: var(--color-3);
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+
+    .tank-value-1 {
+      height: 100%;
+      background-color: var(--color-4);
+      width: 50%;
+      position: relative;
+      left: -10px;
+      text-align: center;
+    }
+
+    .tank-value-1 p {
+      margin: 0;
+      padding: 0;
+      margin-left: 10px;
+      font-size: 11px;
+      font-weight: bold;
+    }
+
+    .tank-value-2 {
+      width: 50%;
+      text-align: center;
+    }
+
+    .tank-value-2 p {
+      margin: 0;
+      padding: 0;
+      color: white;
+      font-size: 12px;
+      font-weight: bold;
+      position: relative;
+      left: -5px;
+    }
+
+    .skew {
+      -webkit-transform: skew(0deg); /* Chrome, Opera */
+          -ms-transform: skew(0deg); /* IE */
+              transform: skew(0deg); /* Padrão */
+    }
+
+    .positive {
+      -webkit-transform: skew(30deg); /* Chrome, Opera */
+          -ms-transform: skew(30deg); /* IE */
+              transform: skew(30deg); /* Padrão */
+    }
+
+    .negative {
+      -webkit-transform: skew(-30deg); /* Chrome, Opera */
+          -ms-transform: skew(-30deg); /* IE */
+              transform: skew(-30deg); /* Padrão */
+    }
