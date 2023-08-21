@@ -1,27 +1,34 @@
-$("#volume").slider({
-    min: 0,
-    max: 100,
-    value: 0,
-    range: "min",
-    slide: function (event, ui) {
-        setVolume(ui.value / 100);
-    }
-});
+const buttons = [
+  document.getElementById('bt_1'),
+  document.getElementById('bt_2'),
+  document.getElementById('bt_3'),
+  document.getElementById('bt_4')
+];
+const values = document.getElementById('values');
+const tank_prices = [
+  document.getElementById('price-tank1'),
+  document.getElementById('price-tank2'),
+  document.getElementById('price-tank3'),
+  document.getElementById('price-tank4')
+];
 
-var myMedia = document.createElement('audio');
-$('#player').append(myMedia);
-myMedia.id = "myMedia";
+const liquid_prices = [
+  values.getAttribute('data-price1'),
+  values.getAttribute('data-price2'),
+  values.getAttribute('data-price3'),
+  values.getAttribute('data-price4')
+];
 
-playAudio('http://emilcarlsson.se/assets/Avicii%20-%20The%20Nights.mp3', 0);
+function bt_click(element, type) {
+  for (var i = 0; i < buttons.length; i++)
+    buttons[i].classList.remove('bt-selected');
+  element.classList.add('bt-selected');
+  values.setAttribute('data-type', element.getAttribute('data-liquid'));
+  ajustValues();
+};
 
-function playAudio(fileName, myVolume) {
-    myMedia.src = fileName;
-    myMedia.setAttribute('loop', 'loop');
-    setVolume(myVolume);
-    myMedia.play();
-}
-
-function setVolume(myVolume) {
-    var myMedia = document.getElementById('myMedia');
-    myMedia.volume = myVolume;
-}
+window.onload = function () {
+  ajustValues();
+  for (var i = 0; i < tank_prices.length; i++)
+    tank_prices[i].innerHTML = `R$${liquid_prices[i]} / Liter`;
+};
