@@ -47,3 +47,53 @@
       transform: rotate(360deg);
     }
   }
+/* CHAT GPT */
+
+.bubble {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border: 2px solid var(--bubble-1);
+  border-radius: 50%;
+  animation: bubble-rise 4s ease-in-out;
+}
+
+.bubble2 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border: 2px solid var(--bubble-2);
+  border-radius: 50%;
+  animation: bubble-rise 4s ease-in-out;
+}
+
+.bubble3 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border: 2px solid var(--bubble-3);
+  border-radius: 50%;
+  animation: bubble-rise 4s ease-in-out;
+}
+
+.bubble4 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: transparent;
+  border: 2px solid var(--bubble-4);
+  border-radius: 50%;
+  animation: bubble-rise 4s ease-in-out;
+}
+
+@keyframes bubble-rise {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100px);
+  }
+}
